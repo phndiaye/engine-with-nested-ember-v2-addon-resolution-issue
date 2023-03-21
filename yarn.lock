@@ -8373,6 +8373,7 @@ __metadata:
     ember-auto-import: 2.6.1
     ember-cli-babel: "*"
     ember-cli-htmlbars: ^6.2.0
+    my-nested-addon: "phndiaye/nested-ember-v2-addon.git#workspace=my-nested-addon"
     webpack: 5
   languageName: unknown
   linkType: soft
