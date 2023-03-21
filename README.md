@@ -1,57 +1,44 @@
 # nested-v2-addon-reproduction
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This repo serves as a reproduction for the following issue:
 
-## Prerequisites
+When using an Ember v2 format addon inside an engine, it looks like the resolver is unable to resolve files from the
+addon (models, components, etc.), leading to the following error:
 
-You will need the following things properly installed on your computer.
+```
+Could not find module 'engine-package/models/user' imported from '(require)'
+```
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/)
-* [Yarn](https://yarnpkg.com/)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+After some tests and adding a "classic" addon in the project, I ended up with two scenarios:
 
-## Installation
+- [FAILING SCENARIO] The v2 addon is installed by the engine (https://github.com/phndiaye/engine-with-nested-ember-v2-addon-resolution-issue/commit/359df5f0e402236ead45e2ddbebc3eadc6eea7a4)
+- [WORKING SCENARIO] The v2 addon is installed by a classic addon (https://github.com/phndiaye/engine-with-nested-ember-v2-addon-resolution-issue/pull/1/commits/56bbef383ae1770fe85cee85a68d9b60c0f78b15)
 
-* `git clone <repository-url>` this repository
-* `cd nested-v2-addon-reproduction`
-* `yarn install`
+The v2 addon itself is located here: https://github.com/phndiaye/nested-ember-v2-addon (it doesn't do much though)
 
-## Running / Development
+# Reproduction steps
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+After pulling this repository:
 
-### Code Generators
+- Install dependencies
 
-Make use of the many generators for code, try `ember help generate` for more details
+```shell
+yarn install
+```
 
-### Running Tests
+- Run the server
 
-* `ember test`
-* `ember test --server`
+```shell
+yarn start
+```
 
-### Linting
+- What to look for?
 
-* `yarn lint`
-* `yarn lint:fix`
+In the failing scenario, when landing on the engine's route (http://localhost:4200/engine-package), the resolution errors
+are visible in the console.
 
-### Building
+In the working scenario, when landing on the engine's route (http://localhost:4200/engine-package), the following
+strings should be visible: `Component from the first-level addon / Foobar! / My super engine / Foobar!`
 
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+The failing commit hash is: 359df5f.
+The working commit hash is: 56bbef3.
