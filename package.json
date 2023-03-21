@@ -71,8 +71,7 @@
   },
   "ember-addon": {
     "paths": [
-      "lib/engine-package",
-      "lib/my-nested-addon"
+      "lib/engine-package"
     ]
   }
 }
