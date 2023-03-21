@@ -1,8 +1,7 @@
 {
-  "name": "engine-package",
+  "name": "first-level-addon",
   "keywords": [
-    "ember-addon",
-    "ember-engine"
+    "ember-addon"
   ],
   "dependencies": {
     "ember-auto-import": "2.6.1",

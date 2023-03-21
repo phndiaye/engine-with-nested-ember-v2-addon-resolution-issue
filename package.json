@@ -10,6 +10,9 @@
     "doc": "doc",
     "test": "tests"
   },
+  "workspaces": [
+    "lib/*"
+  ],
   "scripts": {
     "build": "ember build --environment=production",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel \"lint:!(fix)\"",
@@ -34,7 +37,7 @@
     "ember-cli-app-version": "^5.0.0",
     "ember-cli-babel": "^7.26.10",
     "ember-cli-dependency-checker": "^3.2.0",
-    "ember-cli-htmlbars": "^5.7.2",
+    "ember-cli-htmlbars": "^6.2.0",
     "ember-cli-inject-live-reload": "^2.1.0",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.2",
@@ -71,7 +74,8 @@
   },
   "ember-addon": {
     "paths": [
-      "lib/engine-package"
+      "lib/engine-package",
+      "lib/first-level-addon"
     ]
   },
   "packageManager": "yarn@3.5.0"
