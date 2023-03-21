@@ -34,10 +34,10 @@ yarn start
 
 - What to look for?
 
-In the failing scenario, when landing on the engine's route (http://localhost:4200/engine-package), the resolution errors
+In the failing scenario (commit hash: 359df5f), when landing on the engine's route (http://localhost:4200/engine-package), the resolution errors
 are visible in the console.
 
-In the working scenario, when landing on the engine's route (http://localhost:4200/engine-package), the following
+In the working scenario (commit hash: 56bbef3), when landing on the engine's route (http://localhost:4200/engine-package), the following
 strings should be visible: `Component from the first-level addon / Foobar! / My super engine / Foobar!`
 
 The failing commit hash is: 359df5f.
