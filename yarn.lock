@@ -4590,6 +4590,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"broccoli-merge-trees@npm:4.2.0, broccoli-merge-trees@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "broccoli-merge-trees@npm:4.2.0"
+  dependencies:
+    broccoli-plugin: ^4.0.2
+    merge-trees: ^2.0.0
+  checksum: 8e5371bf41d8b95dd3d600a35d159e185fe0ce0a558cb7b35cdfbb0e3cf2941ee92745dafa7452be0034929459c84acdb55bf762d8c2ca5e59fd124fb219e559
+  languageName: node
+  linkType: hard
+
 "broccoli-merge-trees@npm:^1.0.0":
   version: 1.2.4
   resolution: "broccoli-merge-trees@npm:1.2.4"
@@ -4623,16 +4633,6 @@ __metadata:
     broccoli-plugin: ^1.3.0
     merge-trees: ^2.0.0
   checksum: 4239955a72f9e9547d3b8af27784e7b4931d88bc83c80b48eaae5819a839e3ab3973ccd459502459fcbc9b69749bbc89e9f06e0025fe5483b1704c6dbe0dd61c
-  languageName: node
-  linkType: hard
-
-"broccoli-merge-trees@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "broccoli-merge-trees@npm:4.2.0"
-  dependencies:
-    broccoli-plugin: ^4.0.2
-    merge-trees: ^2.0.0
-  checksum: 8e5371bf41d8b95dd3d600a35d159e185fe0ce0a558cb7b35cdfbb0e3cf2941ee92745dafa7452be0034929459c84acdb55bf762d8c2ca5e59fd124fb219e559
   languageName: node
   linkType: hard
 
@@ -7289,6 +7289,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "engine-package@workspace:lib/engine-package"
   dependencies:
+    broccoli-merge-trees: 4.2.0
     ember-auto-import: 2.6.1
     ember-cli-babel: "*"
     ember-cli-htmlbars: ^6.2.0
@@ -8373,7 +8374,6 @@ __metadata:
     ember-auto-import: 2.6.1
     ember-cli-babel: "*"
     ember-cli-htmlbars: ^6.2.0
-    my-nested-addon: "phndiaye/nested-ember-v2-addon.git#workspace=my-nested-addon"
     webpack: 5
   languageName: unknown
   linkType: soft

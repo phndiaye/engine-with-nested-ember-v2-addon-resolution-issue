@@ -5,6 +5,7 @@
     "ember-engine"
   ],
   "dependencies": {
+    "broccoli-merge-trees": "4.2.0",
     "ember-auto-import": "2.6.1",
     "ember-cli-babel": "*",
     "ember-cli-htmlbars": "^6.2.0",

@@ -6,7 +6,7 @@ module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
     autoImport: {
-      watchDependencies: ['my-nested-addon'],
+      watchDependencies: ['my-nested-addon']
     }
   });
 
